@@ -124,14 +124,30 @@
                                                     </div>
                                                 </div>
 
-                                                 <div class="col-lg-6">
-                                        <span class="pf-title">City / Town</span>
-                                        <div class="pf-field">
-                                            <input type="text" name="job_post_city" value="<?php echo !empty($current_post['job_post_city']) ? $current_post['job_post_city'] : ''?>" placeholder="Ex: London"/>
-                                        </div>
-                                    </div>
+                                                <div class="col-lg-6">
+                                                    <span class="pf-title">Oman Governorates</span>
+                                                    <div class="pf-field">
+                                                       <!--  <input type="text" name="job_post_city" value="<?php echo !empty($current_post['job_post_city']) ? $current_post['job_post_city'] : ''?>" placeholder="Ex: Muscat"/> -->
 
-
+                                                        <select id="country_filter" class="chosen" data-placeholder="Oman Governorates" data-select2-id="country_filter"  name="job_post_city"
+                                                        <?php echo !empty($current_post['job_post_city']) ?'selected' : ''?>
+                                                            <option value="" data-select2-id=""></option>
+                                                                                                      <!--  <option value=""> -->
+                                                                                                                <!--  </option> -->
+                                                                    <option value="Ad Dakhiliyah" data-select2-id="19"> Ad Dakhiliyah </option>
+                                                                    <option value="Ad Dhahirah" data-select2-id="20">Ad Dhahirah  </option>
+                                                                    <option value="Al Batinah North" data-select2-id="21"> Al Batinah North </option>
+                                                                    <option value="Al Batinah South" data-select2-id="22">Al Batinah South  </option>
+                                                                    <option value="Al Buraymi" data-select2-id="23"> Al Buraymi </option>
+                                                                    <option value="Al Wusta" data-select2-id="24"> Al Wusta </option>
+                                                                    <option value="Ash Sharqiyah North" data-select2-id="25"> Ash Sharqiyah North </option>
+                                                                    <option value="Ash Sharqiyah South" data-select2-id="26"> Ash Sharqiyah South </option>
+                                                                    <option value="Dhofar" data-select2-id="27"> Dhofar </option>
+                                                                    <option value="Muscat" data-select2-id="28">  Muscat</option>
+                                                                    <option value="Musandam" data-select2-id="29"> Musandam </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
 
                                                 <div class="col-lg-6">
                                                     <span class="pf-title">Country <span style="color: red">*</span></span>

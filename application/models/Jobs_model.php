@@ -36,8 +36,6 @@ class Jobs_model extends CI_Model
 
         $currentDate=date('Y-m-d').' 23:59:59';
         $OneyearAgoDate= date('Y-m-d', strtotime('-1 years')).' 00:00:00';
-        $where= "job_post_posted_date < '".$currentDate."'";
-        $where2= "DATE_ADD(job_post_posted_date , INTERVAL 30 DAY) > '".$currentDate."'";
 
         $this->db->distinct();
         $this->db->select('job_posts.*,
@@ -50,8 +48,8 @@ class Jobs_model extends CI_Model
     //      $this->db->join('employer', 'employer.employer_id = job_posts.job_post_employer_id','left');
         $this->db->from('job_posts');
         $this->db->where('post_status', '1');
-          $this->db->where($where);
-        $this->db->where($where2);
+        $this->db->where('job_post_posted_date <', 'CURRENT_DATE');
+        $this->db->where('DATE_ADD(job_post_posted_date , INTERVAL 30 DAY) >', 'CURRENT_DATE', false);
         $this->db->where('job_post_country', 203);
         $this->db->where('post_approval', '1');
 
@@ -213,7 +211,6 @@ class Jobs_model extends CI_Model
     function get_recent_jobs($limit = null, $from = null)
     {
         try {
-            $today = date("Y-m-d H:i:s");
             $this->db->select('job_posts.*,
                                 employer.employer_name,
                                 employer.employer_logo_url,
@@ -224,8 +221,8 @@ class Jobs_model extends CI_Model
             $this->db->where('post_status', '1');
             $this->db->where('job_post_country', 203);
             //CURRENT_DATE
-            $this->db->where('job_post_posted_date <', $today);
-            $this->db->where('DATE_ADD(job_post_posted_date , INTERVAL 30 DAY) >', "'$today'", false);
+            $this->db->where('job_post_posted_date <', 'CURRENT_DATE');
+            $this->db->where('DATE_ADD(job_post_posted_date , INTERVAL 30 DAY) >', 'CURRENT_DATE', false);
 
             $this->db->where('post_approval', '1');
             $this->db->join('employer', 'employer.employer_id = job_posts.job_post_employer_id');
@@ -402,9 +399,7 @@ class Jobs_model extends CI_Model
 
     function get_job_category()
     {
-        $today = date("Y-m-d H:i:s");
         $this->db->select('*');
-        //$this->db->where('DATE_ADD(job_post_posted_date , INTERVAL 30 DAY) >', "'$today'", false);
         $this->db->from('job_category');
         $query = $this->db->get();
         return $query->result_array();
@@ -429,13 +424,10 @@ class Jobs_model extends CI_Model
 
     function get_job_post_count_by_filters($cond)
     {
-        
-        
         $this->db->select('count(*)');
         $this->db->from('job_posts');
         $this->db->where('post_approval', '1');
         $this->db->where($cond);
-        
         $query = $this->db->get();
 //        echo $this->db->last_query();
         return $query->row_array();

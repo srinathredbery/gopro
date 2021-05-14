@@ -1148,7 +1148,7 @@ $.fn.dataTable.ext.search.push(
 
 console.log(st_time);
 
-if(st_time =='' || st_time_end=='' ||  du_time=='' ||   location==''){
+if(st_time =='' || st_time_end=='' ||     location==''){
     Swal.fire({
   icon: 'error',
   title: 'Oops...',
@@ -1236,6 +1236,7 @@ $('.filter-input:checked').each(function () {
                                 },
                                 success: function (data) {
                                     HoldOn.close();
+                                    $('#interview_start_time').val('');
                                 },
                                 error: function (jqXHR, textStatus, errorThrown) {
                                     HoldOn.close();

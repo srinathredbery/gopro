@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13683246-34ce-4e13-bdd2-147b38cbd870" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/employer_job_post_expired.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../controllers/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../controllers/Authentication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../controllers/employer/Employer_post_job.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../controllers/employer/Employer_post_job.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../controllers/job/Job_listing.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../controllers/job/Job_listing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../helpers/custom_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../helpers/custom_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../libraries/Env_reader.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../libraries/Env_reader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/Employer_job_post_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/Employer_job_post_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/Jobs_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/Jobs_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ats_employer_setup_exam_maker.php" beforeDir="false" afterPath="$PROJECT_DIR$/ats_employer_setup_exam_maker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employer_job_post_live.php" beforeDir="false" afterPath="$PROJECT_DIR$/employer_job_post_live.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../include/nav_employer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../include/nav_employer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../include/nav_extras.php" beforeDir="false" afterPath="$PROJECT_DIR$/../include/nav_extras.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../include/nav_general.php" beforeDir="false" afterPath="$PROJECT_DIR$/../include/nav_general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../include/side_bar_left_employer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../include/side_bar_left_employer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../job/job_listing_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/../job/job_listing_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/template_extras.php" beforeDir="false" afterPath="$PROJECT_DIR$/../templates/template_extras.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/template_main.php" beforeDir="false" afterPath="$PROJECT_DIR$/../templates/template_main.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1oBkXWzXodMWKBu2mx7anxV79Yb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Live/jobenvoy" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13683246-34ce-4e13-bdd2-147b38cbd870" name="Default Changelist" comment="" />
+      <created>1612767411922</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612767411922</updated>
+      <workItem from="1612767413833" duration="32000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1612767452667">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1612767452667" />
+  </component>
+</project>

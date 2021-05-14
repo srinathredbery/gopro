@@ -718,6 +718,7 @@ return;
                     // if(type!=null) {
                     //  $('#question_answer').append(html);
                     // }
+                    var tot=0;
                     for(var i=0;i<data.output.length;i++){
 
                         var q_id=data.output[i]['q_id'];
@@ -886,8 +887,17 @@ else{
         }
 
         function exam_next(){
+  var total_zcroe=$('#total_mark').text();
+            if(total_zcroe < 100){
+                Swal.fire('Total of all Question must not be lower than 100%');
+
+            }
+            else{
+
+
             var id_exam=$('#id_exam').val();
             window.location.replace("<?php echo base_url() ?>employer/job_posts/ats_setup_exam_maker_next?next_job_id="+id_exam);
+             }
 
         }
 

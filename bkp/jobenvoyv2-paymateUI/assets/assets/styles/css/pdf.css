@@ -1,0 +1,42 @@
+
+body {
+	text-align: justify;
+	font-family: Arial; /* font 10pt-16pt*/
+	font-size: 12pt;
+}
+
+p, small{
+	font-size: 10pt;
+}
+
+.email-header{
+	font-weight: bold;
+	font-size: 14pt; /*14pt-17pt*/
+	alignment: center!important;
+	text-decoration: underline;
+}
+.bullet-style {
+	list-style-type: square;
+	font-size: 10pt;
+}
+
+.bg-content {
+	background: #F4F4F4!important;
+}
+
+.text-right {
+	text-align: right;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 1000px;
+	margin: 50px auto;
+}
+
+th, td {
+	padding: 1rem;
+	text-align: left;
+	min-width: 100px;
+}

@@ -326,27 +326,33 @@
                                                         $a3users=implode('|', $a3);
                                                         $a4users=implode('|', $a4);
                                                         $a5users=implode('|', $a5);
+                                                         $ratemesuretotal=0;
 
                                                         for ($x = 1; $x <= $arrayitems; $x++) {
                                                             if ($x==1) {
                                                                 $count_cv=count($a1);
                                                                 $af= $a1users;
+                                                                $color='#3FC1C0 !important;';
                                                             }
                                                             if ($x==2) {
                                                                 $count_cv=count($a2);
                                                                  $af= $a2users;
+                                                                 $color="#20BAC5 !important;";
                                                             }
                                                             if ($x==3) {
                                                                 $count_cv=count($a3);
                                                                 $af= $a3users;
+                                                                $color="#00B2CA !important;";
                                                             }
                                                             if ($x==4) {
                                                                 $count_cv=count($a4);
                                                                 $af= $a4users;
+                                                                $color="#04A6C2 !important;";
                                                             }
                                                             if ($x==5) {
                                                                 $count_cv=count($a5);
                                                                 $af= $a5users;
+                                                                $color="#0899BA !important;";
                                                             }
 
 
@@ -355,11 +361,11 @@
 
                                                             
                                                         
-                                                                       $ratemesure=$ratemesure*$x;
+                                                                    $ratemesuretotal= $ratemesure+ $ratemesuretotal;
 
 
                                                             ?>
-  <div class="multi-progress-bar" data-toggle="tooltip" data-placement="top" data-html="true" data-original-title="<b><u><?php  echo $ratemesure;  ?>% Matched</u></b> <br> No of CV: <?php echo $count_cv; ?>" style="width:<?php echo $ratemesure; ?>%;background-color:#3FC1C0;" filter="<?php  echo   $af; ?>"><?php echo $ratemesure; ?>%</div> 
+  <div class="multi-progress-bar" data-toggle="tooltip" data-placement="top" data-html="true" data-original-title="<b><u><?php  echo $ratemesuretotal;  ?>% Matched</u></b> <br> No of CV: <?php echo $count_cv; ?>" style="width:<?php echo  $ratemesure; ?>%;background-color:<?php echo $color ?>" filter="<?php  echo   $af; ?>"><?php echo $ratemesuretotal; ?>%</div> 
                                                             <?php
                                                         }
                                                     }
@@ -391,7 +397,7 @@
                                                         
 
 
-                                                        ?>
+                                                     
 
                                                         <?php
                                                     }
@@ -705,10 +711,11 @@
                                 <thead>
                                     <tr>
                                         <td style="display: none;">  #</td>
-                                        <td style="display: none;">  #</td>
+                                  <!--       <td style="display: none;">  #</td> -->
                                         <td style="width: 10px;"></td>
                                         <td style="text-align: left;">Name</td>
-                                        <!-- <td style="text-align: left;">Resume</td> -->
+                                          <!-- <td style="display: none;">  </td> -->
+                                     <td style="text-align: left;">Resume</td>
                                         <td style="text-align: left;">Cover Letter</td>
                                         <td style="text-align: left;">Ratings</td>
                                    
@@ -954,7 +961,7 @@ var htmlbucket='';
 
                     htmlbucket += '<tr class="emply-resume-list_1" data-apl_id="' + application_no + '" role="row">';
                     htmlbucket += '<td style="display: none;">' + job_post_employer_id + '</td>';
-                    htmlbucket += '<td><br><div class="level-1-layer">';
+                    htmlbucket += '<td><div class="level-1-layer">';
                     htmlbucket += '   <div class="item-checkbox">';
                     htmlbucket += '<input type="checkbox" name="access_func[]" class="filter-input route-parent rou-1" value="1" id="par-' + job_post_employer_id + '" style="z-index:1 !important">';
                     htmlbucket += '<label class="filter-label" for="par-' + job_post_employer_id + '">';
@@ -964,7 +971,7 @@ var htmlbucket='';
 
                     htmlbucket += '<td>' +  jobseeker_last_name + '</td>';
                     htmlbucket += '<td>';
-                    htmlbucket +=  applied_resume ;
+                   htmlbucket +=  applied_resume ;
                     htmlbucket += '</td>';
                     htmlbucket += '<td>'+cover_letter+'</td>';
 
@@ -1338,9 +1345,9 @@ $('.plus').click(function(){
             var emp_id = tr.find('td:nth-child(1)').text();
 
               var name = tr.find('td:nth-child(3)').text();
-               var resume = tr.find('td:nth-child(4)').html();
-               var cover_letter= tr.find('td:nth-child(5)').html();
-               var ratings= tr.find('td:nth-child(6)').text();
+               var resume = tr.find('td:nth-child(5)').html();
+               var cover_letter= tr.find('td:nth-child(6)').html();
+               var ratings= tr.find('td:nth-child(7)').html();
 
 
 
@@ -1419,7 +1426,7 @@ var html='';
                 }
 
 
- $('#jobs_emp_table_body2').html(html);
+ //$('#jobs_emp_table_body2').html(html);
 
 
  $('#jobs_emp_table2').DataTable({

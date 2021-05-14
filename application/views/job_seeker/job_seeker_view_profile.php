@@ -153,9 +153,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        <span class="pf-title">Oman Governorates</span>
+                                                        <span class="pf-title">City</span>
                                                         <div class="pf-field">
-                                                            <input type="text" placeholder="Muscat" name="jobseeker_city" value="<?php echo !empty($js_profile['jobseeker_city'])? $js_profile['jobseeker_city']:'' ?>"/>
+                                                            <input type="text" placeholder="City" name="jobseeker_city" value="<?php echo !empty($js_profile['jobseeker_city'])? $js_profile['jobseeker_city']:'' ?>"/>
                                                         </div>
                                                     </div>
 
@@ -594,7 +594,7 @@ input.addEventListener('change', function() {
     videoSource.setAttribute('src', e.target.result);
     video.appendChild(videoSource);
     video.load();
-    video.play();
+   // video.play();
   };
   
   reader.onprogress = function (e) {
@@ -627,6 +627,7 @@ $(':file').on('change', function () {
          formData.append('white_rice_token', rice);
 
          $('.page-loading').attr('style','display: block !important');
+         HoldOn.open(loader_options);
 
   $.ajax({
     // Your server script to process the upload
@@ -647,6 +648,7 @@ $(':file').on('change', function () {
       var myXhr = $.ajaxSettings.xhr();
       if (myXhr.upload) {
         // For handling the progress of the upload
+        HoldOn.close();
         myXhr.upload.addEventListener('progress', function (e) {
           if (e.lengthComputable) {
             $('progress').attr({
@@ -657,6 +659,7 @@ $(':file').on('change', function () {
         }, false);
       }
       $('.page-loading').attr('style','display: none;');
+      HoldOn.close();
       return myXhr;
     }
   });

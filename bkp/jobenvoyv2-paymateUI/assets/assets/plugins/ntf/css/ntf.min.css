@@ -1,0 +1,181 @@
+#ntf {
+    z-index: 1500;
+    position: fixed;
+    left: 0;
+    right: 0;
+    min-width: 30px;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+
+    -webkit-box-shadow: 0px 1px 19px -2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 1px 19px -2px rgba(0,0,0,0.4);
+    box-shadow: 0px 1px 19px -2px rgba(0,0,0,0.4);
+}
+
+#ntf[data-position=top] {
+    top: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px
+}
+
+#ntf[data-position=bottom] {
+    bottom: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px
+}
+
+#ntf.responsive {
+    width: 100%
+}
+
+#ntf.responsive[data-position=top] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+#ntf.responsive[data-position=bottom] {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0
+}
+
+@media (min-width: 768px) {
+    #ntf.responsive {
+        width: 40%
+    }
+
+    #ntf.responsive[data-position=top] {
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px
+    }
+
+    #ntf.responsive[data-position=bottom] {
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px
+    }
+}
+
+#ntf .ntf-text {
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+#ntf .ntf-text > span {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#ntf .ntf-text > p{
+    color: #FFFFFF !important;
+    font-size: unset;
+    line-height: unset;
+}
+
+#ntf[data-position=top] .ntf-text {
+    padding-top: 15px
+}
+
+#ntf[data-position=bottom] .ntf-text {
+    padding-bottom: 15px
+}
+
+#ntf .ntf-close {
+    padding: 0;
+    text-align: center
+}
+
+#ntf .ntf-close > button {
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    outline: 0
+}
+
+#ntf .ntf-close > button::-moz-focus-inner {
+    border: 0
+}
+
+#ntf .ntf-close > button > span {
+    display: inline-block;
+    padding: 1px 0;
+    color: rgba(255, 255, 255, 0.64);
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s
+}
+
+#ntf[data-position=top] .ntf-close > button > span {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+
+#ntf[data-position=bottom] .ntf-close > button > span {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+#ntf .ntf-close > button:hover > span {
+    color: rgba(255, 255, 255)
+}
+
+#ntf[data-color=blue] {
+    background-color: #03A9F4;
+    color: #FFFFFF;
+}
+
+#ntf[data-color=green] {
+    background-color: #2ac14d;
+    color: #FFFFFF;
+}
+
+#ntf[data-color=red] {
+    background-color: #e74c3c;
+    color: #FFFFFF;
+}
+
+#ntf[data-color=yellow] {
+    background-color: #ff8f00;
+    color: #ffffff;
+}
+
+@keyframes slideDown {
+    from {
+        margin-top: -100%
+    }
+    to {
+        margin-top: 0
+    }
+}
+
+@keyframes slideUp {
+    from {
+        margin-bottom: -100%
+    }
+    to {
+        margin-bottom: 0
+    }
+}
+
+.slideDown {
+    -webkit-animation-name: slideDown;
+    animation-name: slideDown
+}
+
+.slideUp {
+    -webkit-animation-name: slideUp;
+    animation-name: slideUp
+}
+
+.slideDown, .slideUp {
+    -webkit-animation-duration: .45s;
+    animation-duration: .45s
+}
