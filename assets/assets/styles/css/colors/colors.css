@@ -1,0 +1,85 @@
+/*------------------------------------------------------------------
+Background Color
+-------------------------------------------------------------------*/
+.bg-color,
+.account-popup > form button,
+.layer.color::before,
+.pricetable > a,
+.pricetable.active,
+.bottom-line.style2{
+    background-color: #28a453;
+}
+
+/*------------------------------------------------------------------
+Text Color
+-------------------------------------------------------------------*/
+.text-color,
+.pricetable-head h2,
+.pricetable.active > a{
+    color: #28a453;
+}
+
+/*------------------------------------------------------------------
+Border Color
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+COLOR SCHEME 2
+-------------------------------------------------------------------*/
+
+.forsticky.sticky .post-job-btn{
+    border: 2px solid #F76618;
+    background: transparent; color: #F76618;
+}
+.post-job-btn{
+    background-color: #F76618 ; border: 2px solid #F76618;
+}
+
+
+.bg-color,
+.post-job-btn,
+.account-popup .close-popup,
+.blog-metas a::before{
+    background-color: #F76618 ;
+}
+
+/*------------------------------------------------------------------
+Text Color
+-------------------------------------------------------------------*/
+.text-color,
+.menu-sec nav > ul > li > ul li:hover > a,
+.account-popup > form .cfield i,
+.account-popup > form > a,
+.chosen-container-single .chosen-single div::before,
+.job-field i,
+.chosen-container .chosen-results li.highlighted,
+.active-result.result-selected,
+.scroll-to a,
+.p-category > a p,
+.p-category:hover i,
+.job-title-sec span,
+.blog-metas a,
+.blog-details > a{
+    color: #F76618 ;
+}
+
+/*------------------------------------------------------------------
+Border Color
+-------------------------------------------------------------------*/
+.border-color,
+.select-user > span.active,
+.browse-all-cat a{
+    border-color: #F76618 ;
+}
+
+.select-user > span.active{
+    border-color: #f76618;
+    background: #f76618;
+    color: #ffffff;
+    -webkit-transition: 0.25s;
+    -moz-transition:  0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+
+}

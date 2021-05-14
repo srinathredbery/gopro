@@ -1,0 +1,9 @@
+body{
+		font-size:14px;
+		font-family: "Times New Roman", Times, serif;
+	}
+
+ul li{
+	    line-height: 1.5;
+	    height: 20px;
+}
